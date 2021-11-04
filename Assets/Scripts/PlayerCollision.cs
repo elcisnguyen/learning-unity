@@ -10,6 +10,7 @@ public class PlayerCollision : MonoBehaviour
         {
             Debug.Log("We hit obstacle");
             playerMovement.enabled = false; //Make player stop moving when collision happens
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 }
